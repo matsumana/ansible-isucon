@@ -4,7 +4,7 @@
   gather_facts: no
   tasks:
     - apt: name=python-selinux state=present update_cache=true
-    - service: name=apparmor enabled=no state=stopped
+#    - service: name=apparmor enabled=no state=stopped
     - apt: name={{item}} state=present
       with_items:
         - git 
